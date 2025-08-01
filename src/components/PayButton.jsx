@@ -16,7 +16,7 @@ const PayButton = ({ upiid, pn, am }) => {
             const PayURL = `upi://pay?pa=${upiid}&pn=${pn}&tid=${tid}&tr=${tr}&am=${am}&cu=INR&url=https://hdshort.netlify.app/`;
             console.log("Pay URL:", PayURL);
 
-            const res = await fetch("http://localhost:5000/api/transation", {
+            const res = await fetch("https://hd-pay-backend.vercel.app/api/transation", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
